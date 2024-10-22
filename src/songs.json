@@ -1,0 +1,151 @@
+{
+    "musiccharts" : [
+        {
+            "imgchart": "https://th.bing.com/th?q=Dunsin+Oyekan+Gospel+Music&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-WW&cc=NG&setlang=en&adlt=moderate&t=1&mw=247",
+            "musictype": "Morning Worship",
+            "artist": "Dunsin Oyekan",
+            "time": "2:34:45"
+        },
+        {
+            "imgchart": "https://rnn.ng/wp-content/uploads/2022/09/Gospel-Music-in-Nigeria-1024x536.jpg",
+            "musictype": "Trending Gospel Songs",
+            "artist": "All artists",
+            "time": "1:02:42"
+        },
+        {
+            "imgchart": " https://assets.audiomack.com/revelationmusik/a4debabd43e2ff81663318694f2f249b719657044fa5eeb16c9d12c9d5226e97.jpeg?width=1000&height=1000&max=true",
+            "musictype": "Nathaniel's tunes",
+            "artist": "Nathaniel Bassey",
+            "time": "2:01:25"
+        }
+       
+    ],
+
+    "newrelease" : [
+        {
+            "name": "Breathe",
+            "path": "/assets/music/newrelease/Breathe.mp3",
+            "artist": "Dunsin Oyekan",
+            "cover": "/assets/images/newrelease/breathe-dunsin.jpg"
+        },
+        {
+            "name":"Turning Around",
+            "path":"/assets/music/newrelease/Joe-Mettle-Turning-Around-(Gospeljingle.com).mp3",
+            "artist":"Joe Mettle",
+            "cover":"/assets/images/newrelease/TurningAround-joe.jpg"
+        },
+        {
+            "name":"This Is The Day(live)",
+            "path":"/assets/music/newrelease/Planetshakers_-_This_Is_The_Day_CeeNaija.com_.mp3",
+            "artist":"PlanetShakers",
+            "cover":"/assets/images/newrelease/this is the day-Planetshakers.jpg"
+        },
+        {
+            "name":"Dance(live)",
+            "path":"/assets/music/newrelease/Planetshakers-Dance-3v.mp3",
+            "artist":"PlanetShakers",
+            "cover":"/assets/images/newrelease/dance-planetshakers.jpg"
+        },
+        {
+            "name":"Fighting for me",
+            "path":"/assets/music/newrelease/Riley_Clemmons_-_Fighting_For_Me_CeeNaija.com_.mp3",
+            "artist":"Riley Clemmons",
+            "cover":"/assets/images/newrelease/fighting for me-riley clemmons.jpg"
+        },
+        {
+            "name":"Yahweh Sabaoth",
+            "path":"/assets/music/newrelease/Nathaniel-Bassey-Yahweh-Sabaoth.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/newrelease/Nathaniel-Bassey-YAHWEH-SABAOTH.jpg"
+        },
+        {
+            "name":"Calling my Name",
+            "path":"/assets/music/newrelease/Ebuka_Songs_-_Calling_My_Name_Im_A_Soldier.mp3",
+            "artist":"Ebuka Songs",
+            "cover":"/assets/images/newrelease/Calling-My-Name-Ebuka-Songs.jpeg"
+        },
+        {
+            "name":"Jesus Iye",
+            "path":"/assets/music/newrelease/Jesus Iye by Nathaniel Bassey.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/newrelease/Jesus-Iye-Cover.jpeg"
+        },
+        {
+            "name":"Waves are Singing",
+            "path":"/assets/music/newrelease/Evans_Ighodalo_-_Waves_Are_Singing-Evans_Ighodalo.mp3",
+            "artist":"Evans Ighodalo",
+            "cover":"/assets/images/newrelease/waves are singing-evans ighodalo.jpg"
+        },
+        {
+            "name":"Daddy you too much",
+            "path":"/assets/music/newrelease/Judikay_-_Daddy_You_Too_Much_CeeNaija.com_.mp3",
+            "artist":"Judikay",
+            "cover":"/assets/images/newrelease/daddy you too much-Judikay.jpg"
+        }
+    ],
+
+
+    "popular" : [
+        {
+            "name": "My Trust is In you",
+            "path": "/assets/music/popular/David-G-My-Trust-Is-In-You.mp3",
+            "artist": "David G",
+            "cover": "/assets/images/popular/david-g.jpg"
+        },
+        {
+            "name":"Tobechukwu",
+            "path":"/assets/music/popular/TOBECHUKWU_Praise_God.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/popular/nathaniel-bassey- x-mercy-chinwo.jpg"
+        },
+        {
+            "name":"Glorious God",
+            "path":"/assets/music/popular/Elijah-Oyelade-Glorious_God.mp3",
+            "artist":"Elijah Oyelade",
+            "cover":"/assets/images/popular/elijah-oyelade.jpg"
+        },
+        {
+            "name":"Breath Upon Me",
+            "path":"/assets/music/popular/Neon_Adejo-Breathe_Upon_Me.mp3",
+            "artist":"Neon Adejo",
+            "cover":"/assets/images/popular/neon-adejo.jpg"
+        },
+        {
+            "name":"One Name (Jesus)",
+            "path":"/assets/music/popular/Naomi_Raine-One_Name.mp3",
+            "artist":"Naomi Raine",
+            "cover":"/assets/images/popular/naomi-raine.jpg"
+        },
+        {
+            "name":"Most High",
+            "path":"/assets/music/popular/BBO-Most_High.mp3",
+            "artist":"BBO",
+            "cover":"/assets/images/popular/BBO.jpg"
+        },
+        {
+            "name":"Dancing On the Waves",
+            "path":"/assets/music/popular/We_The_Kingdom-Dancing_On_The_Waves.mp3",
+            "artist":"Bethel Music & We The Kingdom",
+            "cover":"/assets/images/popular/dancing-on-the-waves.jpg"
+        },
+        {
+            "name":"Obinasom",
+            "path":"/assets/music/popular/Mercy-Chinwo-Obinasom.mp3",
+            "artist":"Mercy Chinwo",
+            "cover":"/assets/images/popular/mercy-chinwo.jpg"
+        },
+        {
+            "name":"Darling Jesus",
+            "path":"/assets/music/popular/SON_Music-Darling_Jesus.mp3",
+            "artist":"S.O.N Music & Neeja",
+            "cover":"/assets/images/popular/S.O.N-music-and-Neeja.jpg"
+        },
+        {
+            "name":"Made a Way",
+            "path":"/assets/music/popular/Travis-Greene-Made-A-Way.mp3",
+            "artist":"Travis Greene",
+            "cover":"/assets/images/popular/travis-greene.jpg"
+        }
+    ]
+
+}
