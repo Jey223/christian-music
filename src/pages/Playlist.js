@@ -15,20 +15,20 @@ function PlayList() {
                             <span className="text-xs md:text-sm font-normal text-[#EFEEE0]">64 songs ~ 16 hrs+</span>
                         </div>
                         <div className="w-full md:w-[300px] flex justify-between items-center mt-4 md:mt-0">
-                            <a className="w-[87px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px] mr-[5px]">
+                            <button className="w-[87px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px] mr-[5px]">
                                 <div className='w-[13px] h-[13px] bg-[#ea8e05] flex items-center justify-center rounded-full'>
                                     <MdPlayArrow className="size-3  text-[#29252c]" />
                                 </div>
                                 <span className="pl-1 text-xs text-white">Play all</span>
-                            </a>
-                            <a className="w-[151px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px] mr-[5px]">
+                            </button>
+                            <button className="w-[151px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px] mr-[5px]">
                                 <MdLibraryMusic className="text-[#ea8e05]" />
                                 <span className="pl-1 text-xs text-white">Add to collection</span>
-                            </a>
-                            <a className="w-24 md:w-[36px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px]">
+                            </button>
+                            <button className="w-24 md:w-[36px] flex items-center justify-center h-[36px] rounded-[32px] bg-[rgba(255,255,255,0.1)] p-[5px] backdrop-blur-[5px]">
                                 < MdFavorite className="text-red-500 size-5" />
                                 <span className="pl-1 text-xs md:hidden text-white">Like</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
