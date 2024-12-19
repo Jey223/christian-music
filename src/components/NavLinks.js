@@ -52,7 +52,7 @@ function Navlink({openNav, toggleNav}) {
                         const {title, url, Icon} = link;
                         return (
                             <li>
-                                <NavLink to={url} className="flex w-full py-5 text-lg font-bold items-center  text-[rgba(239,238,224,0.7)] " > <Icon size={22} />
+                                <NavLink to={url} className="flex w-full py-5 text-lg font-bold items-center  text-[rgba(239,238,224,0.7)] " onClick={toggleNav} > <Icon size={22} />
                                 <span className="ml-5 md:hidden">{title}</span> </NavLink>
 
                                 {/* <a key={id} href={url} className="flex w-full py-5 text-lg font-bold items-center  text-[rgba(239,238,224,0.7)] "  >
