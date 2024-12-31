@@ -5,7 +5,7 @@ import PlayList from "../pages/Playlist";
 import NoPage from "../pages/NoPage";
 import Navlink from "./NavLinks";
 
-function AppRouter({toggleNav, playlists, openNav}) {
+function AppRouter({toggleNav, playlists, openNav, allSongs, favouriteSongs}) {
 
     return (
         <>
@@ -13,7 +13,7 @@ function AppRouter({toggleNav, playlists, openNav}) {
                 <Navlink openNav={openNav} toggleNav={toggleNav}/>
                 <Routes>
                     <Route index element={<Home toggleNav={toggleNav} playlists={playlists} />} />
-                    <Route path="/collection" element={<MyCollection />} />
+                    <Route path="/collection" element={<MyCollection favouriteSongs={favouriteSongs} />} />
                     <Route path="/playlist" element={<PlayList />} />
                     <Route path="*" element={<NoPage />} />
                 </Routes>

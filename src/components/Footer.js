@@ -1,14 +1,13 @@
-// import { MdVolumeUp } from "react-icons/md";
-import {BiHeart, BiChevronDown, BiChevronUp} from "react-icons/bi";
+import { BiChevronDown, BiChevronUp} from "react-icons/bi";
+import { MdFavorite } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
-// useCallback,
 import Controls from "./controls";
 import Volume from "./volume";
-// import PlayPage from "./play";
-// , BiHeart, BiChevronDown
 
 
-function Footer({currentSong, songs, currentSongIndex , nextSong , prevSong, isPlaying, handlePlayPause, isRepeating, handleRepeat, setIsPlaying, handleShuffle, isShuffling }) {
+function Footer({currentSong, nextSong , prevSong, isPlaying, handlePlayPause, isRepeating, handleRepeat, setIsPlaying, handleShuffle, isShuffling, isFavourite, toggleFavourite }) {
+
+    
   const audioElement = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -127,6 +126,8 @@ function Footer({currentSong, songs, currentSongIndex , nextSong , prevSong, isP
     const toggleMute = () => {
         setVolume(preVolume => preVolume === 0 ? 0.5 : 0);  // Toggle between mute and 50% volume
     }
+
+    // console.log(currentSong.id)
     
     return (
         <>
@@ -137,7 +138,7 @@ function Footer({currentSong, songs, currentSongIndex , nextSong , prevSong, isP
                 <div className={`h-full ${isExpanded ? "w-full md:flex md:py-5 md:w-[calc(100%_-_98px)] md:pl-[37px] md:mx-auto md:my-0 md:justify-between md:items-center " :"flex py-5 w-[90%] md:w-[calc(100%_-_98px)] md:pl-[37px] mx-auto my-0 justify-between items-center"}`}>
 
                     <div className={ isExpanded ? "show md:hidden flex justify-between items-center absolute top-[-10px]" :"hidden"}>
-                      <BiHeart className="w-6 h-6 text-[#ea8e05] cursor-pointer"/>
+                      <MdFavorite onClick={() => toggleFavourite(currentSong.id)} className={`"w-6 h-6  cursor-pointer " ${isFavourite(currentSong.id) ? 'text-red-500' :  'text-[#ea8e05]' }`}/>
                     </div>
 
                     

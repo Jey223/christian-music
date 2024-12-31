@@ -1,4 +1,5 @@
 import { BiHeart } from "react-icons/bi";
+import { Link } from "react-router";
 
 
 function MusicCharts() {
@@ -43,7 +44,10 @@ function MusicCharts() {
           <div className="lg:flex lg:items-center">
             <img src="https://assets.audiomack.com/revelationmusik/a4debabd43e2ff81663318694f2f249b719657044fa5eeb16c9d12c9d5226e97.jpeg?width=1000&height=1000&max=true" alt="" className="w-20 lg:w-16 h-20 lg:h-16 object-cover rounded-xl" />
             <div className="mt-2.5 lg:mt-0 lg:ml-2.5">
+              <Link to="./playlist">
               <h3 className="text-sm font-bold text-white cursor-pointer">Nathaniel's tunes</h3>
+              </Link>
+              
               <p className="text-xs text-slate-400 mt-1 font-bold">Nathaniel Bassey</p>
               <span className="mt-3.5 lg:mt-2.5 text-sm font-bold inline-block">2:01:25</span>
             </div>
