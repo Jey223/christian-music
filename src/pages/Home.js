@@ -9,7 +9,7 @@ import { useKeenSlider } from "keen-slider/react.es";
 
 
 
-function Home({toggleNav, playlists}) {
+function Home({popularSongs, newReleaseSongs, playSong, showFooter}) {
 
   const [sliderRef] = useKeenSlider({
     breakpoints: {
@@ -39,9 +39,11 @@ function Home({toggleNav, playlists}) {
     },
   })
 
+  
+
   return(
     <main className="w-full md:w-[calc(100%_-_139px)] h-full bg-[#29252c] md:my:0 md:mx-[90px]">  
-      <div className="pt-[70px] pb-28 w-[90%] md:w-full my-0 mx-auto">
+      <div className={`pt-[70px]  w-[90%] md:w-full my-0 mx-auto ${showFooter ? 'pb-28' : 'pb-5'}`}>
         <div className="w-full lg:h-[373px] lg:flex lg:flex-row lg:justify-between">
           <div className="w-full lg:w-[60%] h-[500px] md:h-96 lg:h-full bg-[#9effa9] rounded-3xl relative bg-cover top-0 right-0" style={{backgroundImage: "url(/images/vector.background.png)"}}>
             <div className="absolute top-0 left-0 h-[500px] md:h-96 lg:h-full w-full bg-[rgba(41,37,44,0.7)] rounded-3xl"></div>
@@ -82,26 +84,16 @@ function Home({toggleNav, playlists}) {
             </div>
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-        
-          
+   
 
         <div className="mt-8">
           <h2 className="py-2.5  text-lg text-[#EFEEE0] font-bold">New Release</h2>
-          <Children1 playlists={playlists} />
+          <Children1 newReleaseSongs={newReleaseSongs} playSong={playSong} />
         </div>
 
         <div className="mt-8">
           <h2 className="py-2.5  text-lg text-[#EFEEE0] font-bold">Popular</h2>
-          <Children2 playlists={playlists} />
+          <Children2 popularSongs={popularSongs} playSong={playSong} />
         </div>
       </div>
     </main>

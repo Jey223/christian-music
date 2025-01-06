@@ -132,7 +132,7 @@ function Footer({currentSong, nextSong , prevSong, isPlaying, handlePlayPause, i
     return (
         <>
             <audio ref={audioElement} src={currentSong?.path} />
-            <div className={`w-full fixed bottom-0 bg-[rgba(29,25,30,0.7)] backdrop-blur-lg z-50 transition-all duration-1000 border border-[rgba(80,72,86,0.1)] ease-in-out ${ isExpanded ? '  max-h-screen md:h-[98px] py-6 px-6 top-6 md:top-auto md:p-0 md:left-0' : '  left-0'}` }>
+            <div className={`w-full fixed bottom-0 bg-[rgba(29,25,30,0.7)] backdrop-blur-lg z-50 transition-all duration-1000 border border-[rgba(80,72,86,0.1)] ease-in-out ${ isExpanded ? ' max-h-screen md:h-[98px] py-6 px-6 top-6 md:top-auto md:p-0 md:left-0' : ' left-0'}` }>
                 <div className="w-6 h-6 bg-[rgba(41,37,44,1)] backdrop-blur-lg border-2 border-[rgba(80,72,86,1)] rounded-[5px] absolute right-[10px] top-[-9px] cursor-pointer flex justify-center items-center md:hidden" onClick={toggleHeight}>{isExpanded ? <BiChevronDown className="w-6 h-6 text-[rgba(239,238,224,0.7)] cursor-pointer" /> : <BiChevronUp className="w-6 h-6 text-[rgba(239,238,224,0.7)] cursor-pointer" /> }     
                 </div>
                 <div className={`h-full ${isExpanded ? "w-full md:flex md:py-5 md:w-[calc(100%_-_98px)] md:pl-[37px] md:mx-auto md:my-0 md:justify-between md:items-center " :"flex py-5 w-[90%] md:w-[calc(100%_-_98px)] md:pl-[37px] mx-auto my-0 justify-between items-center"}`}>
