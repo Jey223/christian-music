@@ -1,0 +1,165 @@
+{
+    "media" : [
+        {
+            "id": 101,
+            "name": "Breathe",
+            "url": "https://res.cloudinary.com/dowd9lrsu/video/upload/v1736794466/Breathe_opxfz2.mp3",
+            "artist": "Dunsin Oyekan",
+            "cover": "/assets/images/newrelease/breathe-dunsin.jpg",
+            "releaseDate": "2024-11" 
+        },
+        {
+            "id": 102,
+            "name":"Turning Around",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796902/Joe-Mettle-Turning-Around-_Gospeljingle.com_gv72qq.mp3",
+            "artist":"Joe Mettle",
+            "cover":"/assets/images/newrelease/TurningAround-joe.jpg",
+            "releaseDate": "2024-12"
+        },
+        {
+            "id": 103,
+            "name":"This Is The Day(live)",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796900/Planetshakers_-_This_Is_The_Day_CeeNaija.com__ynuui7.mp3",
+            "artist":"PlanetShakers",
+            "cover":"/assets/images/newrelease/this is the day-Planetshakers.jpg",
+            "releaseDate": "2024-10"
+        },
+        {
+            "id": 104,
+            "name":"Dance(live)",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796906/Planetshakers-Dance-3v_fjz4s5.mp3",
+            "artist":"PlanetShakers",
+            "cover":"/assets/images/newrelease/dance-planetshakers.jpg",
+            "releaseDate": "2024-11"
+        },
+        {
+            "id": 105,
+            "name":"Fighting for me",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796905/Riley_Clemmons_-_Fighting_For_Me_CeeNaija.com__fmxiyf.mp3",
+            "artist":"Riley Clemmons",
+            "cover":"/assets/images/newrelease/fighting for me-riley clemmons.jpg",
+            "releaseDate": "2024-12"
+        },
+        {
+            "id": 106,
+            "name":"Yahweh Sabaoth",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796909/Nathaniel-Bassey-Yahweh-Sabaoth_a7fnys.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/newrelease/Nathaniel-Bassey-YAHWEH-SABAOTH.jpg",
+            "releaseDate": "2024-12"
+        },
+        {
+            "id": 107,
+            "name":"Calling my Name",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736795542/Ebuka_Songs_-_Calling_My_Name_Im_A_Soldier_rkkww1.mp3",
+            "artist":"Ebuka Songs",
+            "cover":"/assets/images/newrelease/Calling-My-Name-Ebuka-Songs.jpeg",
+            "releaseDate": "2024-10"
+        },
+        {
+            "id": 108,
+            "name":"Jesus Iye",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796907/Jesus_Iye_by_Nathaniel_Bassey_lfaf5q.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/newrelease/Jesus-Iye-Cover.jpeg",
+            "releaseDate": "2024-10"
+        },
+        {
+            "id": 109,
+            "name":"Waves are Singing",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796057/Evans_Ighodalo_-_Waves_Are_Singing-Evans_Ighodalo_fu9gth.mp3",
+            "artist":"Evans Ighodalo",
+            "cover":"/assets/images/newrelease/waves are singing-evans ighodalo.jpg",
+            "releaseDate": "2024-11"
+        },
+        {
+            "id": 110,
+            "name":"Daddy you too much",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736796899/Judikay_-_Daddy_You_Too_Much_CeeNaija.com__pqitug.mp3",
+            "artist":"Judikay",
+            "cover":"/assets/images/newrelease/daddy you too much-Judikay.jpg",
+            "releaseDate": "2024-11"
+        },
+        {
+            "id": 111,
+            "name": "My Trust is In you",
+            "url": "https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799380/David-G-My-Trust-Is-In-You_emlusp.mp3",
+            "artist": "David G",
+            "cover": "/assets/images/popular/david-g.jpg",
+            "releaseDate": "2024-8"
+        },
+        {
+            "id": 112,
+            "name":"Tobechukwu",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799392/TOBECHUKWU_Praise_God_sh7prb.mp3",
+            "artist":"Nathaniel Bassey",
+            "cover":"/assets/images/popular/nathaniel-bassey- x-mercy-chinwo.jpg",
+            "releaseDate": "2024-5"
+        },
+        {
+            "id": 113,
+            "name":"Glorious God",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799386/Elijah-Oyelade-Glorious_God_gcvllw.mp3",
+            "artist":"Elijah Oyelade",
+            "cover":"/assets/images/popular/elijah-oyelade.jpg",
+            "releaseDate": "2024-5"
+        },
+        {
+            "id": 114,
+            "name":"Breath Upon Me",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799393/Neon_Adejo-Breathe_Upon_Me_lptj4p.mp3",
+            "artist":"Neon Adejo",
+            "cover":"/assets/images/popular/neon-adejo.jpg",
+            "releaseDate": "2024-9"
+        },
+        {
+            "id": 115,
+            "name":"One Name (Jesus)",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799392/Naomi_Raine-One_Name_q72syw.mp3",
+            "artist":"Naomi Raine",
+            "cover":"/assets/images/popular/naomi-raine.jpg",
+            "releaseDate": "2024-2"
+        },
+        {
+            "id": 116,
+            "name":"Most High",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799379/BBO-Most_High_c6ckmw.mp3",
+            "artist":"BBO",
+            "cover":"/assets/images/popular/BBO.jpg",
+            "releaseDate": "2024-4"
+        },
+        {
+            "id": 117,
+            "name":"Dancing On the Waves",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799393/We_The_Kingdom-Dancing_On_The_Waves_l9p3y5.mp3",
+            "artist":"Bethel Music & We The Kingdom",
+            "cover":"/assets/images/popular/dancing-on-the-waves.jpg",
+            "releaseDate": "2024-6"
+        },
+        {
+            "id": 118,
+            "name":"Obinasom",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799386/Mercy-Chinwo-Obinasom_chmbui.mp3",
+            "artist":"Mercy Chinwo",
+            "cover":"/assets/images/popular/mercy-chinwo.jpg",
+            "releaseDate": "2024-1"
+        },
+        {
+            "id": 119,
+            "name":"Darling Jesus",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799381/SON_Music-Darling_Jesus_lpsfvg.mp3",
+            "artist":"S.O.N Music & Neeja",
+            "cover":"/assets/images/popular/S.O.N-music-and-Neeja.jpg",
+            "releaseDate": "2024-8"
+        },
+        {
+            "id": 200,
+            "name":"Made a Way",
+            "url":"https://res.cloudinary.com/dowd9lrsu/video/upload/v1736799387/Travis-Greene-Made-A-Way_gz0jfl.mp3",
+            "artist":"Travis Greene",
+            "cover":"/assets/images/popular/travis-greene.jpg",
+            "releaseDate": "2024-2"
+        }
+    ]
+    
+}

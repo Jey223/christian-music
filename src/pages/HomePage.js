@@ -1,6 +1,5 @@
 import MusicCharts from "../components/MusicCharts";
-import Children1 from "../components/MusicChildren1";
-import Children2 from "../components/MusicChildren2";
+import Children1 from "../components/MusicCard";
 import { MdFavorite } from "react-icons/md";
 import "keen-slider/keen-slider.css";
 import { useKeenSlider } from "keen-slider/react.es";
@@ -9,7 +8,7 @@ import { useKeenSlider } from "keen-slider/react.es";
 
 
 
-function Home({popularSongs, newReleaseSongs, playSong, showFooter}) {
+function HomePage ({popular, newRelease, playSong, showFooter}) {
 
   const [sliderRef] = useKeenSlider({
     breakpoints: {
@@ -86,18 +85,10 @@ function Home({popularSongs, newReleaseSongs, playSong, showFooter}) {
         </div>
    
 
-        <div className="mt-8">
-          <h2 className="py-2.5  text-lg text-[#EFEEE0] font-bold">New Release</h2>
-          <Children1 newReleaseSongs={newReleaseSongs} playSong={playSong} />
-        </div>
-
-        <div className="mt-8">
-          <h2 className="py-2.5  text-lg text-[#EFEEE0] font-bold">Popular</h2>
-          <Children2 popularSongs={popularSongs} playSong={playSong} />
-        </div>
+        <Children1 newRelease={newRelease} popular={popular} playSong={playSong} />
       </div>
     </main>
   )
 }
 
-export default Home;
+export default HomePage;

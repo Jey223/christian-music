@@ -1,7 +1,7 @@
 import { MdPlayArrow, MdLibraryMusic, MdFavorite, MdFavoriteBorder } from "react-icons/md";
 
 
-function PlayList() {
+function PlayListPage() {
 
     return (
         <div className="box-border w-full md:w-[calc(100%_-_139px)] bg-[#29252c] md:my:0 md:mx-[90px]">
@@ -61,4 +61,4 @@ function PlayList() {
     )
 }
 
-export default PlayList;
+export default PlayListPage;

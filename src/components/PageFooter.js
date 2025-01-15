@@ -1,7 +1,7 @@
 import { BiChevronDown, BiChevronUp} from "react-icons/bi";
 import { MdFavorite } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
-import Controls from "./controls";
+import MusicControls from "./MusicControls";
 import Volume from "./volume";
 
 
@@ -154,7 +154,7 @@ function Footer({currentSong, nextSong , prevSong, isPlaying, handlePlayPause, i
                         </div>
                     </div>
                     
-                    <Controls prevSong={prevSong} nextSong={nextSong} handlePlayPause={handlePlayPause} isPlaying={isPlaying} isExpanded={isExpanded} currentTime={currentTime} handleSeek={handleSeek} musicBarWidth={musicBarWidth} duration={duration} handleRepeat={handleRepeat} isRepeating={isRepeating} handleShuffle={handleShuffle} isShuffling={isShuffling} formatTime={formatTime}  />
+                    <MusicControls prevSong={prevSong} nextSong={nextSong} handlePlayPause={handlePlayPause} isPlaying={isPlaying} isExpanded={isExpanded} currentTime={currentTime} handleSeek={handleSeek} musicBarWidth={musicBarWidth} duration={duration} handleRepeat={handleRepeat} isRepeating={isRepeating} handleShuffle={handleShuffle} isShuffling={isShuffling} formatTime={formatTime}  />
                     
                     <Volume isExpanded={isExpanded} volume={volume} handleVolumeChange={handleVolumeChange} toggleMute={toggleMute} />
                 

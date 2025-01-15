@@ -1,7 +1,23 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import PageFooter from "./components/PageFooter";
+import PageHeader from "./components/PageHeader";
 import { useState, useEffect } from "react";
 import AppRouter from "./components/AppRouter";
+import data from "./media-library.json";
+
+console.log("Main Media",data)
+
+
+const NEW_RELEASE_PERIOD = 3;
+
+// Utility function to calculate the difference in months
+const calculateMonthDifference = (releaseDate) => {
+  const currentDate = new Date();
+  const [year, month] = releaseDate.split("-");
+  const release = new Date(year, month - 1);
+  return (
+    (currentDate.getFullYear() - release.getFullYear()) * 12 + (currentDate.getMonth() - release.getMonth())
+  );
+};
 
 
 
@@ -10,37 +26,47 @@ import AppRouter from "./components/AppRouter";
 function App() {
   const [openNav, setOpenNav] = useState(false);
   const [allSongs, setAllSongs] = useState([]);
-  const [popularSongs, setPopularSongs] = useState([]); 
-  const [newReleaseSongs, setNewReleaseSongs] = useState([]);
+  const [popular, setPopular] = useState([]); 
+  const [newRelease, setNewRelease] = useState([]);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentPlaylist, setCurrentPlaylist] = useState(''); // 'popular' or 'newRelease'
   const [isRepeating, setIsRepeating] = useState(false);
   const [isShuffling, setIsShuffling] = useState(false);
   const [shuffledSongs, setShuffledSongs] = useState([]);
   const [favourite, setFavourite] = useState([]);
   const [favouriteSongs, setFavouriteSongs] = useState([]);
   const [showFooter, setShowFooter] = useState(false);
-  // const [previousSongIndex, setPreviousSongIndex] = useState(null);
   
 
 
   useEffect(() => {
-    fetch("/songs.json")
+    fetch(".media-library.json")
       .then(Response => Response.json())
       .then(data => {
-        // setPlaylists(data);
-        const popular = data.popular || []; 
-        const newrelease = data.newrelease || [];
-        // const songsArray = Object.values(data).flat();
-        const songsArray = [...popular, ...newrelease];;
-        setAllSongs(songsArray);
-        setPopularSongs(data.popular); 
-        setNewReleaseSongs(data.newrelease);
-        // setShuffledSongs(songsArray); // Initialize shuffledSongs to the same as allSongs
+        const musicData = data.media;
+        setAllSongs(musicData);
+
+        // Categorize Songs
+        const newReleaseSongs = [];
+        const popularSongs = [];
+
+        musicData.forEach((song) => {
+            const diffInMonth = calculateMonthDifference(song.releaseDate);
+            if(diffInMonth <= NEW_RELEASE_PERIOD) {
+              newReleaseSongs.push(song);
+            } else {
+              popularSongs.push(song);
+            }
+        });
+
+        setNewRelease(newReleaseSongs);
+        setPopular(popularSongs);
+
       })
       .catch(error => console.error('Error fetching JSON:', error))
+
   }, []);
+
 
   
   const shuffleArray = (array) => {
@@ -54,26 +80,14 @@ function App() {
   
 
   const handleShuffle = () => {
-    // if (!isShuffling) {
-    //   const shuffled = shuffleArray(allSongs);
-    //   console.log(shuffled);
-    //   setShuffledSongs(shuffled);
-    //   setIsShuffling(true);
-    // } else {
-    //   setIsShuffling(false);
-    //   setShuffledSongs(allSongs);
-    // }
     if (isShuffling) {
       setIsShuffling(false);
       setShuffledSongs([]);
     } else {
-      const currentSongs = currentPlaylist === 'popular' ? popularSongs : newReleaseSongs;
-      const shuffled = shuffleArray(currentSongs);
+      const shuffled = shuffleArray(allSongs);
       console.log("Shuffled", shuffled);
       setIsShuffling(true);
       setShuffledSongs(shuffled)
-
-      console.log(currentSongs)
     }
   }
 
@@ -81,27 +95,20 @@ function App() {
     setIsPlaying(prev => !prev);
   };
   
-  const playSong = (index, playlist) => { 
+  
+  const playSong = (index) => { 
       setCurrentSongIndex(index);
-      setCurrentPlaylist(playlist);
-      if(playlist === 'popular') {
-        console.log('Popular Music')
-      }
       setIsPlaying(true); 
       setShowFooter(true);
   };
 
   const nextSong = () => {
     let nextIndex; 
-    const currentSongs = currentPlaylist === 'popular' ? popularSongs : newReleaseSongs;
     if (isShuffling) { 
-      // nextIndex = (shuffledSongs.findIndex(song => song === allSongs[currentSongIndex]) + 1) % shuffledSongs.length;
-      // setCurrentSongIndex(allSongs.findIndex(song => song === shuffledSongs[nextIndex])); 
-      nextIndex = (shuffledSongs.findIndex (song => song === currentSongs[currentSongIndex] + 1) % shuffledSongs.length);
-      setCurrentSongIndex(currentSongs.filterIndex(song => song === shuffledSongs[nextIndex]))
+      nextIndex = (shuffledSongs.findIndex (song => song === allSongs[currentSongIndex] + 1) % shuffledSongs.length);
+      setCurrentSongIndex(allSongs.filterIndex(song => song === shuffledSongs[nextIndex]))
     } else { 
-      nextIndex = (currentSongIndex + 1) % currentSongs.length; setCurrentSongIndex(nextIndex);
-      // setPreviousSongIndex(currentSongIndex)
+      nextIndex = (currentSongIndex + 1) % allSongs.length; setCurrentSongIndex(nextIndex);
     }
     if (isPlaying) {
       setIsPlaying(true);
@@ -109,15 +116,12 @@ function App() {
   };
 
   const prevSong = () => {
-    const currentSongs = currentPlaylist === 'popular' ? popularSongs : newReleaseSongs;
     let prevIndex; 
     if (isShuffling) { 
-      // prevIndex = (shuffledSongs.findIndex(song => song === allSongs[currentSongIndex]) - 1 + shuffledSongs.length) % shuffledSongs.length; 
-      // setCurrentSongIndex(allSongs.findIndex(song => song === shuffledSongs[prevIndex])); 
-      prevIndex = (shuffledSongs.findIndex(song => song === currentSongs[currentSongIndex]) - 1 + shuffledSongs.length) % shuffledSongs.length; 
-      setCurrentSongIndex(currentSongs.findIndex(song => song === shuffledSongs[prevIndex])); 
+      prevIndex = (shuffledSongs.findIndex(song => song === allSongs[currentSongIndex]) - 1 + shuffledSongs.length) % shuffledSongs.length; 
+      setCurrentSongIndex(allSongs.findIndex(song => song === shuffledSongs[prevIndex])); 
     } else { 
-      prevIndex = (currentSongIndex - 1 + currentSongs.length) % currentSongs.length; 
+      prevIndex = (currentSongIndex - 1 + allSongs.length) % allSongs.length; 
       setCurrentSongIndex(prevIndex); 
     }
     if (isPlaying) {
@@ -144,7 +148,11 @@ function App() {
       return favourite.includes(song.id)});
     console.log("Filtered Favourite Songs:", fetchedFavouriteSongs); // Debugging line
       setFavouriteSongs(fetchedFavouriteSongs);
-  }, [allSongs, favourite])
+
+      if(!fetchedFavouriteSongs) {
+        return <div>No data found for the given Id.</div>
+      }
+  }, [allSongs, favourite]);
 
 
   const toggleFavourite = (id) => {
@@ -162,14 +170,9 @@ function App() {
         });
   }
 
-  // useEffect(() => {
-  //   localStorage.setItem('FavouriteSong', JSON.stringify(favourite));
-  // }, [favourite])
-
 
   const isFavourite = (id) => favourite.includes(id);
 
-  // favourite.includes(currentPlaylist === 'popular' ? popularSongs[currentSongIndex].id : newReleaseSongs[currentSongIndex].id)
 
   function toggleNav() {
     setOpenNav(!openNav);
@@ -184,12 +187,12 @@ function App() {
     <div className="box-border text-white w-full bg-[#29252c]">
       {allSongs.length > 0 ? (
         <>
-            <Header toggleNav={toggleNav} />
-            <AppRouter toggleNav={toggleNav} popularSongs={popularSongs}  newReleaseSongs={newReleaseSongs} openNav={openNav} favouriteSongs={favouriteSongs} playSong={playSong} showFooter={showFooter} />
+            <PageHeader toggleNav={toggleNav} />
+            <AppRouter toggleNav={toggleNav} allSongs={allSongs} openNav={openNav} favouriteSongs={favouriteSongs} playSong={playSong} showFooter={showFooter} handlePlayPause={handlePlayPause} popular={popular} newRelease={newRelease} />
           
 
           {showFooter && (
-            <Footer currentSong={isShuffling ? shuffledSongs[currentSongIndex] : (currentPlaylist === 'popular' ? popularSongs[currentSongIndex] : newReleaseSongs[currentSongIndex])} nextSong={nextSong} prevSong={prevSong} currentSongIndex={currentSongIndex} isPlaying={isPlaying} handlePlayPause={handlePlayPause} isRepeating={isRepeating} handleRepeat={handleRepeat} setIsPlaying={setIsPlaying} handleShuffle={handleShuffle} isShuffling={isShuffling} isFavourite={isFavourite} toggleFavourite={toggleFavourite} />
+            <PageFooter currentSong={isShuffling ? shuffledSongs[currentSongIndex] :  allSongs[currentSongIndex]} nextSong={nextSong} prevSong={prevSong} currentSongIndex={currentSongIndex} isPlaying={isPlaying} handlePlayPause={handlePlayPause} isRepeating={isRepeating} handleRepeat={handleRepeat} setIsPlaying={setIsPlaying} handleShuffle={handleShuffle} isShuffling={isShuffling} isFavourite={isFavourite} toggleFavourite={toggleFavourite} />
           )}
             
 

@@ -1,11 +1,27 @@
-import { MdPlayArrow } from "react-icons/md";
+import { MdPlayArrow, MdPause } from "react-icons/md";
 // import { useEffect } from "react";
+// import { useEffect ,useRef } from "react";
 
 
 
-function MyCollection({favouriteSongs, showFooter}) {
+function FavouritePage({favouriteSongs, showFooter, handlePlayPause, playSong, isPlaying}) {
+
+//   const audioElement = useRef(null);
+
+//   // Play or Pause
+//   useEffect(() => {
+//     const audio = audioElement.current
+//     if (isPlaying) {
+//         audio.play().catch(error => console.log('Error playing audio:', error));
+//     } else {
+//         audio.pause();
+//     }
+// }, [isPlaying]);
+
 
     console.log(favouriteSongs)
+
+    console.log(isPlaying);
 
 //     console.log(allSongs)
 
@@ -56,8 +72,9 @@ function MyCollection({favouriteSongs, showFooter}) {
                                         <p className="text-xs">{song.artist}</p>
                                         
                                     </div>
-                                    <div className='w-[40px] h-[40px] bg-[#ea8e05] flex items-center justify-center rounded-full shadow-[0_0_8px_0] shadow-[#ea8e05] mix-blend-lighten translate-x-[60px] duration-500 ease-linear delay-0 transition-all'>
-                                        <MdPlayArrow className="size-7 md:size-5 " />
+                                    {/* translate-x-[60px]  */}
+                                    <div className='w-[40px] h-[40px] bg-[#ea8e05] flex items-center justify-center rounded-full shadow-[0_0_8px_0] shadow-[#ea8e05] mix-blend-lighten duration-500 ease-linear delay-0 transition-all'>
+                                    {isPlaying ?  <MdPause className="size-7 md:size-5"/>  : <MdPlayArrow className="size-7 md:size-5"/> }
                                     {/* text-[#ea8e05] */}
                                     </div>
                                     
@@ -108,4 +125,4 @@ function MyCollection({favouriteSongs, showFooter}) {
 
 }
 
-export default MyCollection;
+export default FavouritePage;

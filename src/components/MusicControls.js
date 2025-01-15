@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 
 
-function Controls({prevSong, handlePlayPause, nextSong,isPlaying, isExpanded, currentTime, duration, handleSeek, musicBarWidth, handleRepeat, isRepeating, handleShuffle, isShuffling, formatTime}) {
+function MusicControls({prevSong, handlePlayPause, nextSong,isPlaying, isExpanded, currentTime, duration, handleSeek, musicBarWidth, handleRepeat, isRepeating, handleShuffle, isShuffling, formatTime}) {
 
   const progressBarRef = useRef(null);
 
@@ -37,4 +37,4 @@ function Controls({prevSong, handlePlayPause, nextSong,isPlaying, isExpanded, cu
 
 
 
-export default Controls;
+export default MusicControls;
